@@ -20,6 +20,7 @@ public class RecyclerViewDetailActivity extends AppCompatActivity implements Son
     public RecyclerView.LayoutManager layoutManager;
     public List<Song> listSong = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

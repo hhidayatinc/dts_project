@@ -46,9 +46,8 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
         holder.txtArtistName.setText(artist.getName());
         holder.txtDesc.setText(artist.getDesc());
         Picasso.get().load(artist.getImgUrl())
-                .placeholder(R.drawable.ic_launcher_background)
                 .into(holder.imgArtist);
-        holder.listSong.toArray();
+
     }
 
     @Override
@@ -59,7 +58,7 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
     public class ArtistViewHolder extends RecyclerView.ViewHolder {
         public ImageView imgArtist;
         public TextView txtArtistName, txtDesc;
-        public List<Song> listSong;
+
 
         public ArtistViewHolder(@NonNull View itemView) {
             super(itemView);

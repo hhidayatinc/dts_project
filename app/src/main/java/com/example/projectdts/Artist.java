@@ -11,13 +11,13 @@ public class Artist  {
     String name;
     String desc;
     String imgUrl;
-    List<Song> listSong;
 
-    public Artist(String name, String desc, String imgUrl, List<Song> listSong) {
+
+    public Artist(String name, String desc, String imgUrl) {
         this.name = name;
         this.desc = desc;
         this.imgUrl = imgUrl;
-        this.listSong = listSong;
+
     }
 
     public String getName() {
@@ -44,13 +44,7 @@ public class Artist  {
         this.imgUrl = imgUrl;
     }
 
-    public List<Song> getListSong() {
-        return listSong;
-    }
 
-    public void setListSong(List<Song> listSong) {
-        this.listSong = listSong;
-    }
 
 
 }
