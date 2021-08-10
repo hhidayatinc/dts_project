@@ -34,7 +34,7 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
     public ArtistAdapter.ArtistViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.
                 from(parent.getContext()).
-                inflate(R.layout.activity_intro, parent, false);
+                inflate(R.layout.item_artist, parent, false);
 
         ArtistViewHolder artVh = new ArtistViewHolder(v);
         return artVh;
@@ -67,6 +67,11 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
             imgArtist = itemView.findViewById(R.id.img_artist);
             txtArtistName = itemView.findViewById(R.id.artist);
             txtDesc = itemView.findViewById(R.id.artist_desc);
+            itemView.setOnClickListener(new View.OnClickListener(){
+                public void onClick(View v){
+                    listener.onClick(v, getAdapterPosition());
+                }
+            });
         }
     }
 }

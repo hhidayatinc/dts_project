@@ -1,6 +1,5 @@
 package com.example.projectdts;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     @Override
     public SongAdapter.SongViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View v = LayoutInflater.from(parent.getContext()).
-                inflate(R.layout.activity_detail, parent, false);
+                inflate(R.layout.artist_detail, parent, false);
 
         SongViewHolder vh = new SongViewHolder(v);
         return vh;
@@ -45,9 +44,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         Song item = listSong.get(i);
         songViewHolder.txtSongTitle.setText(item.getTitle());
         songViewHolder.txtSongDuration.setText(item.getDuration());
-        Picasso.get().load(item.getImg())
-                .placeholder(R.drawable.ic_launcher_background)
-                .into(songViewHolder.imgSong);
+        Picasso.get().load(item.getImg()).into(songViewHolder.imgSong);
     }
 
     @Override

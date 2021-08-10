@@ -1,6 +1,7 @@
 package com.example.projectdts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivity.this,IntroActivity.class);
+                Intent i = new Intent(MainActivity.this, RecyclerViewDetailActivity.class);
                 startActivity(i);
                 finish();
             }
