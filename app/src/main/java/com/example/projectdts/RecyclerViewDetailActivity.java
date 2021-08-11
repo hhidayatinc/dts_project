@@ -9,6 +9,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,17 +30,15 @@ public class RecyclerViewDetailActivity extends AppCompatActivity implements Son
     public SongAdapter songAdapter;
     public RecyclerView.LayoutManager layoutManager;
     public List<Song> listSong = new ArrayList<>();
-
+    public List<Song> listDream = new ArrayList<>();
+    private final  String TAG = RecyclerViewDetailActivity.class.getName();
+    public static final String Key_RegisterActivity = "Key_RegisterActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        getSupportActionBar().hide();
-//        getWindow().setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_recycler_view_detail);
-
 
         rv = findViewById(R.id.rv_detail_artist);
 
@@ -90,7 +89,8 @@ public class RecyclerViewDetailActivity extends AppCompatActivity implements Son
     @Override
     public void onCLick(View view, int position) {
         Song song = listSong.get(position);
-        Intent i = new Intent(RecyclerViewDetailActivity.this, SongDetailActivity.class);
+        Intent i = new Intent(this,SongDetailActivity.class);
+        i.putExtra(Key_RegisterActivity,song);
         startActivity(i);
     }
 }

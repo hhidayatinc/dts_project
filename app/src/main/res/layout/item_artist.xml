@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/img_artist"
@@ -28,6 +28,8 @@
         android:layout_marginEnd="8dp"
         android:text="Nama"
         android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_semi_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -36,7 +38,7 @@
     <TextView
         android:id="@+id/artist_desc"
         android:layout_width="220dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:text="Nomor Telepon"

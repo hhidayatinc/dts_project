@@ -19,6 +19,7 @@ public class RecylerViewActivity extends AppCompatActivity implements ArtistAdap
     public ArtistAdapter artistAdapter;
     public RecyclerView.LayoutManager layoutManager;
     public List<Artist> listArtist = new ArrayList<>();
+    Song song;
 
 
     @Override
@@ -33,9 +34,14 @@ public class RecylerViewActivity extends AppCompatActivity implements ArtistAdap
         rv = findViewById(R.id.rvArtist);
 
 
-        listArtist.add(new Artist("NCT DREAM",
-                "NCT Dream is the third sub-unit of the South Korean boy band NCT, formed by SM Entertainment in 2016. The group debuted on August 25, 2016 with the single Chewing Gum",
-                "https://www.mainmain.id/uploads/post/2020/04/14/NCT_Dream_comeback_Reload_1.jpg"
+        listArtist.add(new Artist("Teman Belajar",
+                "",
+                "https://image.flaticon.com/icons/png/512/747/747086.png", (List<Song>) song
+        ));
+
+        listArtist.add(new Artist("Ya Gitu",
+                "",
+                "https://image.flaticon.com/icons/png/512/747/747086.png", (List<Song>) song
         ));
 
         artistAdapter = new ArtistAdapter(listArtist);
