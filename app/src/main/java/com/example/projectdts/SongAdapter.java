@@ -44,6 +44,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         Song item = listSong.get(i);
         songViewHolder.txtSongTitle.setText(item.getTitle());
         songViewHolder.txtSongDuration.setText(item.getDuration());
+        songViewHolder.txtSongArtist.setText(item.getArtist());
         Picasso.get().load(item.getImg()).into(songViewHolder.imgSong);
     }
 
@@ -55,7 +56,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     public class SongViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView imgSong;
-        public TextView txtSongTitle, txtSongDuration;
+        public TextView txtSongTitle, txtSongDuration, txtSongArtist;
 
         public SongViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,6 +64,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
             imgSong = itemView.findViewById(R.id.imgSong);
             txtSongTitle = itemView.findViewById(R.id.song_title);
             txtSongDuration = itemView.findViewById(R.id.song_duration);
+            txtSongArtist = itemView.findViewById(R.id.song_artist);
         }
     }
 }

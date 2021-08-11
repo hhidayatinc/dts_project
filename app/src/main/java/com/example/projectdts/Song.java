@@ -7,11 +7,13 @@ public class Song  {
     String title;
     String duration;
     String img;
+    String artist;
 
-    public Song(String title, String duration, String img) {
+    public Song(String title, String duration, String img, String artist) {
         this.title = title;
         this.duration = duration;
         this.img = img;
+        this.artist = artist;
     }
 
     public String getTitle() {
@@ -38,5 +40,11 @@ public class Song  {
         this.img = img;
     }
 
+    public String getArtist() {
+        return artist;
+    }
 
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
 }
