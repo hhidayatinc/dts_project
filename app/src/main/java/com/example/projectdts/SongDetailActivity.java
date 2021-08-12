@@ -21,6 +21,9 @@ public class SongDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         setContentView(R.layout.activity_song_detail);
 
         tvTitleSong = findViewById(R.id.title_song_detail);

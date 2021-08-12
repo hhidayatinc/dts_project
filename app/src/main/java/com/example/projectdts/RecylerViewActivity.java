@@ -26,8 +26,8 @@ public class RecylerViewActivity extends AppCompatActivity implements ArtistAdap
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        getSupportActionBar().hide();
-//        getWindow().setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+        getWindow().setFlags(FLAG_FULLSCREEN, FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_recyler_view);
 
