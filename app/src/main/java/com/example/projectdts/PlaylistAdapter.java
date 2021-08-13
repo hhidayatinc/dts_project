@@ -34,7 +34,7 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.Artist
     public PlaylistAdapter.ArtistViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.
                 from(parent.getContext()).
-                inflate(R.layout.item_artist, parent, false);
+                inflate(R.layout.playlist_item, parent, false);
 
         ArtistViewHolder artVh = new ArtistViewHolder(v);
         return artVh;
@@ -44,7 +44,7 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.Artist
     public void onBindViewHolder(@NonNull ArtistViewHolder holder, int position) {
         Playlist playlist = listPlaylist.get(position);
         holder.txtArtistName.setText(playlist.getName());
-        holder.txtDesc.setText(playlist.getDesc());
+
         Picasso.get().load(playlist.getImgUrl())
                 .into(holder.imgArtist);
 
@@ -57,15 +57,15 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.Artist
 
     public class ArtistViewHolder extends RecyclerView.ViewHolder {
         public ImageView imgArtist;
-        public TextView txtArtistName, txtDesc;
+        public TextView txtArtistName;
 
 
         public ArtistViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imgArtist = itemView.findViewById(R.id.img_artist);
-            txtArtistName = itemView.findViewById(R.id.artist);
-            txtDesc = itemView.findViewById(R.id.artist_desc);
+            txtArtistName = itemView.findViewById(R.id.playlist);
+
             itemView.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v){
                     listener.onClick(v, getAdapterPosition());
