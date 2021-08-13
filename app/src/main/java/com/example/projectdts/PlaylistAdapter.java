@@ -14,12 +14,12 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistViewHolder> {
+public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.ArtistViewHolder> {
 
-    private List<Artist> listArtist = new ArrayList<>();
+    private List<Playlist> listPlaylist = new ArrayList<>();
 
-    public ArtistAdapter(List<Artist> listArtist) {
-        this.listArtist = listArtist;
+    public PlaylistAdapter(List<Playlist> listPlaylist) {
+        this.listPlaylist = listPlaylist;
     }
 
     private OnArtistClickListener listener;
@@ -31,7 +31,7 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
     public void setListener(OnArtistClickListener listener) { this.listener = listener;}
     @NonNull
     @Override
-    public ArtistAdapter.ArtistViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PlaylistAdapter.ArtistViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.
                 from(parent.getContext()).
                 inflate(R.layout.item_artist, parent, false);
@@ -42,17 +42,17 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ArtistView
 
     @Override
     public void onBindViewHolder(@NonNull ArtistViewHolder holder, int position) {
-        Artist artist = listArtist.get(position);
-        holder.txtArtistName.setText(artist.getName());
-        holder.txtDesc.setText(artist.getDesc());
-        Picasso.get().load(artist.getImgUrl())
+        Playlist playlist = listPlaylist.get(position);
+        holder.txtArtistName.setText(playlist.getName());
+        holder.txtDesc.setText(playlist.getDesc());
+        Picasso.get().load(playlist.getImgUrl())
                 .into(holder.imgArtist);
 
     }
 
     @Override
     public int getItemCount() {
-        return listArtist.size();
+        return listPlaylist.size();
     }
 
     public class ArtistViewHolder extends RecyclerView.ViewHolder {

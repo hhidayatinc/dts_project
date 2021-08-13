@@ -13,13 +13,13 @@ import java.util.List;
 
 import static android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN;
 
-public class RecylerViewActivity extends AppCompatActivity implements ArtistAdapter.OnArtistClickListener{
+public class RecylerViewActivity extends AppCompatActivity implements PlaylistAdapter.OnArtistClickListener{
 
     public RecyclerView rv;
-    public ArtistAdapter artistAdapter;
+    public PlaylistAdapter playlistAdapter;
     public RecyclerView.LayoutManager layoutManager;
-    public List<Artist> listArtist = new ArrayList<>();
-    Song song;
+    public List<Playlist> listPlaylist = new ArrayList<>();
+
 
 
     @Override
@@ -34,26 +34,18 @@ public class RecylerViewActivity extends AppCompatActivity implements ArtistAdap
         rv = findViewById(R.id.rvArtist);
 
 
-        listArtist.add(new Artist("Teman Belajar",
-                "",
-                "https://image.flaticon.com/icons/png/512/747/747086.png", (List<Song>) song
-        ));
 
-        listArtist.add(new Artist("Ya Gitu",
-                "",
-                "https://image.flaticon.com/icons/png/512/747/747086.png", (List<Song>) song
-        ));
 
-        artistAdapter = new ArtistAdapter(listArtist);
-        artistAdapter.setListener(this);
+        playlistAdapter = new PlaylistAdapter(listPlaylist);
+        playlistAdapter.setListener(this);
         layoutManager = new LinearLayoutManager(getApplicationContext());
-        rv.setAdapter(artistAdapter);
+        rv.setAdapter(playlistAdapter);
         rv.setLayoutManager(layoutManager);
     }
 
     @Override
     public void onClick(View view, int i) {
-        Artist artist = listArtist.get(i);
+        Playlist playlist = listPlaylist.get(i);
         Intent intent =new Intent(RecylerViewActivity.this, RecyclerViewDetailActivity.class);
         startActivity(intent);
     }
