@@ -1,6 +1,7 @@
 package com.example.projectdts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -48,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(view.getContext(), "Password cannot be empty!", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(getApplicationContext(), "Login Success! Welcome! ", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(LoginActivity.this, RecyclerViewDetailActivity.class);
+            Intent i = new Intent(LoginActivity.this, RecylerViewActivity.class);
             startActivity(i);
         }
     }

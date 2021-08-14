@@ -7,15 +7,13 @@
 
     <ImageView
         android:id="@+id/img_artist"
-        android:layout_width="88dp"
-        android:layout_height="94dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
         android:layout_marginBottom="8dp"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/artist_desc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,7 +25,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:text="Nama"
-        android:textSize="20dp"
         android:textColor="@color/black"
         android:fontFamily="@font/montserrat_semi_bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,25 +32,12 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/artist_desc"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:text="Nomor Telepon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/song_title" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="120dp" />
+        app:layout_constraintGuide_begin="100dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
